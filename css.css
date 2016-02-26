@@ -1,0 +1,23 @@
+div {
+    background-color: #f4faaa;
+}
+[data-role="header"] {
+    background-color: #f4f447 !important;
+    box-shadow: 0 2px 5px black;
+    color: white !important;
+    font-size: 25px;
+    text-shadow: 1px 1px 3px black !important;
+}
+label {
+    text-align: center;
+}
+.cabecera {
+    background-color: #eaea1e;
+    font-weight: bold;
+    font-size: 18px;
+}
+.tablas,
+tr,
+td {
+    text-align: center !important;
+}

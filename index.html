@@ -1,7 +1,333 @@
+<!DOCTYPE html>
 <html>
-  <head>
-  </head>
-  <body>
-    
-  </body>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>jQuery Mobile Demo</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="css.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Página 2-->
+    <div data-role="page" id="index" data-add-back-btn=”true”>
+        <div data-role="header">
+            <h1>Acceso</h1>
+        </div>
+        <div data-role="content">
+            <form>
+                <label>Usuario</label>
+                <input type="text">
+                <label>Contraseña</label>
+                <input type="password">
+
+                <a href="#admin" data-role="button">Acceder</a>
+            </form>
+        </div>
+    </div>
+    <!-- Fin página 2 -->
+
+    <!-- Inicio página admin -->
+    <div id="admin">
+        <div data-role="fieldcontain">
+            <h2 class="curso">Curso DAW</h2>
+            <table data-role="table" id="my-table" class="ui-responsive ui-shadow tablas">
+                <thead>
+                    <tr class="cabecera">
+                        <td>Alumno</td>
+                        <td>Puntuación</td>
+                        <td>Todo</td>
+                        <td>Evaluar</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alumno 1</td>
+                        <td>Sin puntuación</td>
+                        <td><a data-role="button" href="#ptsFin">Ver</a></td>
+                        <td><a data-role="button" href="#ptCont">Evaluar</a></td>
+                    </tr>
+                    <tr>
+                        <td>Alumno 2</td>
+                        <td>6.28</td>
+                        <td><a data-role="button" href="#ptsFin">Ver</a></td>
+                        <td><a data-role="button" href="#ptCont">Evaluar</a></td>
+
+                    </tr>
+                    <tr>
+                        <td>Alumno 3</td>
+                        <td>4.8</td>
+                        <td><a data-role="button" href="#ptsFin">Ver</a></td>
+                        <td><a data-role="button" href="#ptCont">Evaluar</a></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div data-role="fieldcontain">
+            <h2 class="curso">Curso ASIR</h2>
+            <table data-role="table" id="my-table" class="ui-responsive ui-shadow tablas">
+                <thead>
+                    <tr class="cabecera">
+                        <td>Alumno</td>
+                        <td>Puntuación</td>
+                        <td>Todo</td>
+                        <td>Evaluar</td>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alumno 1</td>
+                        <td>Sin puntuación</td>
+                        <td><a data-role="button" href="#ptsFin">Ver</a></td>
+                        <td><a data-role="button" href="#ptCont">Evaluar</a></td>
+                    </tr>
+                    <tr>
+                        <td>Alumno 2</td>
+                        <td>6.28</td>
+                        <td><a data-role="button" href="#ptsFin">Ver</a></td>
+                        <td><a data-role="button" href="#ptCont">Evaluar</a></td>
+
+                    </tr>
+                    <tr>
+                        <td>Alumno 3</td>
+                        <td>4.8</td>
+                        <td><a data-role="button" href="#ptsFin">Ver</a></td>
+                        <td><a data-role="button" href="#ptCont">Evaluar</a></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div data-role="fieldcontain">
+            <h2 class="curso">Curso DAM</h2>
+            <table data-role="table" id="my-table" class="ui-responsive ui-shadow tablas">
+                <thead>
+                    <tr class="cabecera">
+                        <td>Alumno</td>
+                        <td>Puntuación</td>
+                        <td>Todo</td>
+                        <td>Evaluar</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alumno 1</td>
+                        <td>Sin puntuación</td>
+                        <td><a data-role="button" href="#ptsFin">Ver</a></td>
+                        <td><a data-role="button" href="#ptCont">Evaluar</a></td>
+                    </tr>
+                    <tr>
+                        <td>Alumno 2</td>
+                        <td>6.28</td>
+                        <td><a data-role="button" href="#ptsFin">Ver</a></td>
+                        <td><a data-role="button" href="#ptCont">Evaluar</a></td>
+
+                    </tr>
+                    <tr>
+                        <td>Alumno 3</td>
+                        <td>4.8</td>
+                        <td><a data-role="button" href="#ptsFin">Ver</a></td>
+                        <td><a data-role="button" href="#ptCont">Evaluar</a></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div data-role="footer">
+        <h4>
+                    <a href="#index">Logout</a>
+                </h4>
+    </div>
+    </div>
+    <div data-role="page" id="ptCont">
+        <div data-role="header">
+            <h1>Evaluar</h1>
+        </div>
+        <div class="pantalla_puntuar" data-role="content">
+            <h1>1.- Contenido del proyecto (65%)</h1>
+            <form>
+                <div>
+                    <h2>Planteamiento</h2>
+                    <label for="">Objetivos</label>
+                    <input type="range" min=0 max=10>
+                    <label for="">Recursos utilizados</label>
+                    <input type="range" min=0 max=10>
+                    <label for="">Destinatarios</label>
+                    <input type="range" min=0 max=10>
+                    <label for="">Justificación del proyecto</label>
+                    <input type="range" min=0 max=10>
+                    <label for="">Comentarios</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <h2>Contenido</h2>
+                    <label for="">Metodología seguida</label>
+                    <input type="range" min=0 max=10>
+                    <label for="">Claridad</label>
+                    <input type="range" min=0 max=10>
+                    <label for="">Actividades o acciones realizadas</label>
+                    <input type="range" min=0 max=10>
+                    <label for="">Documentación elaborada</label>
+                    <input type="range" min=0 max=10>
+                    <label for="">Comentarios</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <h2>Resultados obtenidos</h2>
+                    <label for="">Conclusiones</label>
+                    <input type="range" min=0 max=10>
+                    <label for="">Objetivos conseguidos y grados de consecución</label>
+                    <input type="range" min=0 max=10>
+                    <label for="">Comentarios</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="pantalla_puntuar" data-role="content">
+            <h1>2.- Calidad de la presentación (10%)</h1>
+            <form>
+                <div>
+                    <h2>Presentación escrita</h2>
+                    <input type="range" min=0 max=10>
+                    <label for="">Comentarios</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <h2>Redacción y claridad del texto</h2>
+                    <input type="range" min=0 max=10>
+                    <label for="">Comentarios</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <h2>Organización del contenido</h2>
+                    <input type="range" min=0 max=10>
+                    <label for="">Comentarios</label>
+                    <textarea name="" id="" cols="40" rows="20"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="pantalla_puntuar" data-role="content">
+            <h1>3.- Expresión oral (25%)</h1>
+            <h4>Valoración APTO o NO APTO</h4>
+
+            <form>
+                <fieldset data-role="controlgroup" data-iconpos="right">
+                    <input id="c1" type="checkbox">
+                    <label for="c1">Entrada del alumno</label>
+                    <input id="c2" type="checkbox">
+                    <label for="c2" class="">Indumentaria</label>
+                    <input id="c3" type="checkbox">
+                    <label for="c3">Introducción</label>
+                    <input id="c4" type="checkbox">
+                    <label for="c4">Desarrollo: Orden en las ideas</label>
+                    <input id="c5" type="checkbox">
+                    <label for="c5">Desarrollo: Claridad en la exposición</label>
+                    <input id="c6" type="checkbox">
+                    <label for="c6">Desarrollo: Aclaración de términos técnicos</label>
+                    <input id="c7" type="checkbox">
+                    <label for="c7">Conclusión</label>
+                    <input id="c8" type="checkbox">
+                    <label for="c8">Seguridad en la exposición</label>
+                    <input id="c9" type="checkbox">
+                    <label for="c9">La presentación esta trabajada</label>
+                    <input id="c10" type="checkbox">
+                    <label for="c10">Entusiasmo en lo que expone</label>
+                </fieldset>
+                <h3>Expresión oral</h3>
+                <fieldset data-role="controlgroup" data-iconpos="right">
+                    <input id="c11" type="checkbox">
+                    <label for="c11">Entonación</label>
+                    <input id="c12" type="checkbox">
+                    <label for="c12">Volumen</label>
+                    <input id="c13" type="checkbox">
+                    <label for="c13">Velocidad adecuada</label>
+                    <input id="c14" type="checkbox">
+                    <label for="c14">No vacila al hablar</label>
+                    <input id="c15" type="checkbox">
+                    <label for="c15">Pausas</label>
+                    <input id="c16" type="checkbox">
+                    <label for="c16">No utiliza muletillas</label>
+                </fieldset>
+                <h3>Lenguaje no verbal</h3>
+                <fieldset data-role="controlgroup" data-iconpos="right">
+                    <input id="c17" type="checkbox">
+                    <label for="c17">Mirada</label>
+                    <input id="c18" type="checkbox">
+                    <label for="c18">Sonrisa/Expresión facial positiva</label>
+                    <input id="c19" type="checkbox">
+                    <label for="c19">Posición correcta del cuerpo</label>
+                    <input id="c20" type="checkbox">
+                    <label for="c20">No tiene tics o gestos nerviosos</label>
+                </fieldset>
+                <fieldset data-role="controlgroup" data-iconpos="right">
+                    <input id="c21" type="checkbox">
+                    <label for="c21">Duración</label>
+                    <input id="c22" type="checkbox">
+                    <label for="c22">¿Logra atraer la atención?</label>
+                    <input id="c23" type="checkbox">
+                    <label for="c23">Preguntas realizadas ¿Responde de forma coherente?</label>
+                </fieldset>
+
+                <h3>Comentarios</h3>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <br>
+                <a data-role="button" href="#ptsfin">Guardar puntuación</a>
+            </form>
+        </div>
+        <div data-role="footer">
+            <h4>
+                    <a href="#index">Logout</a>
+                </h4>
+        </div>
+    </div>
+    <!-- Fin página puntuaciones expresion oral-->
+
+
+    <!-- Inicio página finalizar puntuación -->
+    <div data-role="page" id="ptsfin">
+        <div data-role="header">
+            <h1>Acceso a la aplicación</h1>
+        </div>
+        <div data-role="content">
+            <h2>Las puntuaciones finales del alumno:</h2>
+            <h4>Alumno: Jose Luis Méndez</h4>
+            <h4>GS: Desarrollo de Aplicaciones Web</h4>
+            <div class="ui-grid-b tabla_puntuaciones">
+                <div class="ui-block-a">
+                    <strong>1. Contenido del proyecto (65%): 4,25</strong>
+                    <br> Planteamiento: 1
+                    <br> Contenido: 1
+                    <br> Resultados obtenidos: 2,25
+                </div>
+                <div class="ui-block-b">
+                    <strong>2. Calidad de la expresión (10%): 0,75</strong>
+                    <br> Presentación escrita: 1
+                    <br> Redacción: 1
+                    <br> Organización del contenido: 1,25
+                </div>
+                <div class="ui-block-c">
+                    <strong>3. Expresión oral (25%): 2.00</strong>
+                </div>
+            </div>
+            <h2>Nota final: 7</h2>
+
+
+            <a data-role="button" href="#ptscont">Volver a puntuar</a>
+            <a data-role="button" href="#admin">Finalizar y volver a la tabla de alumnos</a>
+        </div>
+        <div data-role="footer">
+            <h4>
+                    <a href="#index">Desconectarse</a>
+                </h4>
+        </div>
+    </div>
+</body>
+
 </html>
