@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <title>jQuery Mobile Demo</title>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <link rel="stylesheet" href="css.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -34,7 +33,7 @@
     <!-- Inicio página admin -->
     <div id="admin">
         <div data-role="fieldcontain">
-            <h2 class="curso">Curso DAW</h2>
+            <h2 class="grado">DAW</h2>
             <table data-role="table" id="my-table" class="ui-responsive ui-shadow tablas">
                 <thead>
                     <tr class="cabecera">
@@ -69,7 +68,7 @@
             </table>
         </div>
         <div data-role="fieldcontain">
-            <h2 class="curso">Curso ASIR</h2>
+            <h2 class="grado">ASIR</h2>
             <table data-role="table" id="my-table" class="ui-responsive ui-shadow tablas">
                 <thead>
                     <tr class="cabecera">
@@ -105,7 +104,7 @@
             </table>
         </div>
         <div data-role="fieldcontain">
-            <h2 class="curso">Curso DAM</h2>
+            <h2 class="grado">DAM</h2>
             <table data-role="table" id="my-table" class="ui-responsive ui-shadow tablas">
                 <thead>
                     <tr class="cabecera">
@@ -150,40 +149,40 @@
         <div data-role="header">
             <h1>Evaluar</h1>
         </div>
-        <div class="pantalla_puntuar" data-role="content">
-            <h1>1.- Contenido del proyecto (65%)</h1>
+        <div data-role="content">
+            <h1>Contenido (65%)</h1>
             <form>
                 <div>
                     <h2>Planteamiento</h2>
                     <label for="">Objetivos</label>
                     <input type="range" min=0 max=10>
-                    <label for="">Recursos utilizados</label>
+                    <label for="">Recursos</label>
                     <input type="range" min=0 max=10>
                     <label for="">Destinatarios</label>
                     <input type="range" min=0 max=10>
-                    <label for="">Justificación del proyecto</label>
+                    <label for="">Justificación</label>
                     <input type="range" min=0 max=10>
                     <label for="">Comentarios</label>
                     <textarea name="" id="" cols="30" rows="10"></textarea>
                 </div>
                 <div>
                     <h2>Contenido</h2>
-                    <label for="">Metodología seguida</label>
+                    <label for="">Metodología</label>
                     <input type="range" min=0 max=10>
                     <label for="">Claridad</label>
                     <input type="range" min=0 max=10>
-                    <label for="">Actividades o acciones realizadas</label>
+                    <label for="">Acciones realizadas</label>
                     <input type="range" min=0 max=10>
-                    <label for="">Documentación elaborada</label>
+                    <label for="">Documentación</label>
                     <input type="range" min=0 max=10>
                     <label for="">Comentarios</label>
                     <textarea name="" id="" cols="30" rows="10"></textarea>
                 </div>
                 <div>
-                    <h2>Resultados obtenidos</h2>
+                    <h2>Resultados</h2>
                     <label for="">Conclusiones</label>
                     <input type="range" min=0 max=10>
-                    <label for="">Objetivos conseguidos y grados de consecución</label>
+                    <label for="">Objetivos conseguidos</label>
                     <input type="range" min=0 max=10>
                     <label for="">Comentarios</label>
                     <textarea name="" id="" cols="30" rows="10"></textarea>
@@ -191,7 +190,7 @@
             </form>
         </div>
         <div class="pantalla_puntuar" data-role="content">
-            <h1>2.- Calidad de la presentación (10%)</h1>
+            <h1>Presentación (10%)</h1>
             <form>
                 <div>
                     <h2>Presentación escrita</h2>
@@ -214,7 +213,7 @@
             </form>
         </div>
         <div class="pantalla_puntuar" data-role="content">
-            <h1>3.- Expresión oral (25%)</h1>
+            <h1>Expresión oral (25%)</h1>
             <h4>Valoración APTO o NO APTO</h4>
 
             <form>
@@ -328,6 +327,10 @@
                 </h4>
         </div>
     </div>
+    <script> $("input[type='checkbox']").attr("checked",false).css({
+        backgroundColor: "orange"
+});
+    </script>
 </body>
 
 </html>

@@ -14,10 +14,20 @@ label {
 .cabecera {
     background-color: #eaea1e;
     font-weight: bold;
+    border: 1px solid black;
     font-size: 18px;
 }
 .tablas,
 tr,
 td {
     text-align: center !important;
+    box-shadow: 0 .4px .2px black !important;
+}
+.grado{
+    text-align: center;
+    color: black;
+    text-shadow: 1px 3px 5px white;
+}
+input:checked{
+    background-color: orange !important;
 }
